@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            color: #666;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Loan Approval Checker</h1>
+        <form action="/predict" method="post">
+            <label for="Gender">Gender:</label><br>
+            <input type="number" name="Gender" value="1"><br>
+
+            <label for="Married">Married (0 for No, 1 for Yes):</label><br>
+            <input type="number" name="Married" value="1"><br>
+
+            <label for="Dependents">Dependents:</label><br>
+            <input type="number" name="Dependents" value="1"><br>
+
+            <label for="Education">Education (0 for Not Graduate, 1 for Graduate):</label><br>
+            <input type="number" name="Education" value="1"><br>
+
+            <label for="Self_Employed">Self Employed (0 for No, 1 for Yes):</label><br>
+            <input type="number" name="Self_Employed" value="1"><br>
+
+            <label for="ApplicantIncome">Applicant Income:</label><br>
+            <input type="number" name="ApplicantIncome" value="5000"><br>
+
+            <label for="CoapplicantIncome">Coapplicant Income:</label><br>
+            <input type="number" name="CoapplicantIncome" value="0"><br>
+
+            <label for="LoanAmount">Loan Amount:</label><br>
+            <input type="number" name="LoanAmount" value="100"><br>
+
+            <label for="Loan_Amount_Term">Loan Amount Term:</label><br>
+            <input type="number" name="Loan_Amount_Term" value="360"><br>
+
+            <label for="Credit_History">Credit History (0 for No, 1 for Yes):</label><br>
+            <input type="number" name="Credit_History" value="1"><br>
+
+            <label for="Property_Area">Property Area (0 for Rural, 1 for Semiurban, 2 for Urban):</label><br>
+            <input type="number" name="Property_Area" value="1"><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
